@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">💗 GLOW<span> BEAUTY</span></div>
+    <p>SMART SHOPPING CART SYSTEM</p>
+
+    <a href="#cart" class="cart-link">
+        🛍️ My Cart <span id="cartCount">0</span>
+    </a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="label">YOUR BEAUTY DESTINATION</span>
+        <h1>Beauty that makes<br><span>you glow ✨</span></h1>
+        <p>Discover your favourite beauty essentials at amazing prices.</p>
+        <button class="shop-button" onclick="shopNow()">
+            EXPLORE PRODUCTS →
+        </button>
+    </div>
+    <div class="hero-emoji">💄</div>
+</section>
+
+<section id="products">
+    <div class="section-heading">
+        <span>OUR COLLECTION</span>
+        <h2>Shop Your Beauty Favourites</h2>
+        <p>Five essentials. Endless beauty looks.</p>
+    </div>
+
+    <div class="product-grid">
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80"
+                     alt="Lipstick">
+                <span class="product-tag">BESTSELLER</span>
+            </div>
+            <div class="product-info">
+                <p class="category">LIP MAKEUP</p>
+                <h3>Velvet Lipstick</h3>
+                <p class="description">Beautiful colour with a smooth finish.</p>
+                <div class="price">₹199 <del>₹299</del></div>
+                <button class="add-button" onclick="addToCart(1)">
+                    <span>🛍️</span> ADD TO CART
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?auto=format&fit=crop&w=600&q=80"
+                     alt="Foundation">
+                <span class="product-tag">POPULAR</span>
+            </div>
+            <div class="product-info">
+                <p class="category">FACE MAKEUP</p>
+                <h3>Liquid Foundation</h3>
+                <p class="description">Lightweight foundation for a smooth finish.</p>
+                <div class="price">₹349 <del>₹499</del></div>
+                <button class="add-button" onclick="addToCart(2)">
+                    <span>🛍️</span> ADD TO CART
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=600&q=80"
+                     alt="Blush">
+                <span class="product-tag">NEW ARRIVAL</span>
+            </div>
+            <div class="product-info">
+                <p class="category">CHEEK MAKEUP</p>
+                <h3>Rose Pink Blush</h3>
+                <p class="description">A lovely pink touch for your makeup look.</p>
+                <div class="price">₹249 <del>₹349</del></div>
+                <button class="add-button" onclick="addToCart(3)">
+                    <span>🛍️</span> ADD TO CART
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1631214540242-8a86f3b4b9f2?auto=format&fit=crop&w=600&q=80"
+                     alt="Kajal">
+                <span class="product-tag">DAILY ESSENTIAL</span>
+            </div>
+            <div class="product-info">
+                <p class="category">EYE MAKEUP</p>
+                <h3>Black Kajal</h3>
+                <p class="description">A classic essential for eye makeup.</p>
+                <div class="price">₹99 <del>₹149</del></div>
+                <button class="add-button" onclick="addToCart(4)">
+                    <span>🛍️</span> ADD TO CART
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
+                     alt="Concealer and beauty products">
+                <span class="product-tag">TRENDING</span>
+            </div>
+            <div class="product-info">
+                <p class="category">FACE MAKEUP</p>
+                <h3>Liquid Concealer</h3>
+                <p class="description">A makeup essential for a polished look.</p>
+                <div class="price">₹229 <del>₹329</del></div>
+                <button class="add-button" onclick="addToCart(5)">
+                    <span>🛍️</span> ADD TO CART
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="cart-section" id="cart">
+    <div class="cart-title">
+        <span>YOUR SELECTION</span>
+        <h2>🛍️ Shopping Cart</h2>
+    </div>
+
+    <div id="cartItems">
+        <div class="empty-cart">
+            <div>🛍️</div>
+            <h3>Your cart is empty</h3>
+            <p>Add your favourite products to get started!</p>
+        </div>
+    </div>
+
+    <div class="cart-summary">
+        <p>Total Items <strong id="summaryCount">0</strong></p>
+        <p>Grand Total <strong id="total">₹0</strong></p>
+    </div>
+
+    <button class="clear-button" onclick="clearCart()">
+        CLEAR CART
+    </button>
+
+    <p id="message" aria-live="polite"></p>
+</section>
+
+<footer>
+    <h2>💗 GLOW BEAUTY</h2>
+    <p>Smart Shopping Cart System</p>
+    <p>© 2026 Glow Beauty. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+              </html>
